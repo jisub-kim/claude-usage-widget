@@ -74,10 +74,10 @@ mkdir -p ~/.swiftbar
 ### 3. Download the plugin / 플러그인 다운로드
 
 ```bash
-curl -o ~/.swiftbar/claude_usage.1m.sh \
-  https://raw.githubusercontent.com/jisub-kim/claude-usage-widget/main/claude_usage.1m.sh
+curl -o ~/.swiftbar/claude_usage.5m.sh \
+  https://raw.githubusercontent.com/jisub-kim/claude-usage-widget/main/claude_usage.5m.sh
 
-chmod +x ~/.swiftbar/claude_usage.1m.sh
+chmod +x ~/.swiftbar/claude_usage.5m.sh
 ```
 
 ### 4. Launch SwiftBar / SwiftBar 실행
@@ -101,7 +101,7 @@ The number in the filename controls the refresh interval.
 
 | Filename | Interval |
 |----------|----------|
-| `claude_usage.1m.sh` | 1분마다 / Every 1 min |
+| `claude_usage.1m.sh` | 1분마다 / Every 1 min (비추천 / not recommended) |
 | `claude_usage.5m.sh` | 5분마다 / Every 5 min |
 | `claude_usage.10m.sh` | 10분마다 / Every 10 min |
 
