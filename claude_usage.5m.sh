@@ -92,6 +92,19 @@ else:
 " 2>/dev/null || echo "?"
 }
 
+fmt_reset_kst() {
+  python3 -c "
+import datetime, zoneinfo
+e = float('${1:-0}')
+if e <= 0:
+    print('?')
+else:
+    kst = zoneinfo.ZoneInfo('Asia/Seoul')
+    dt = datetime.datetime.fromtimestamp(e, tz=kst)
+    print(dt.strftime('%m/%d %H:%M KST'))
+" 2>/dev/null || echo "?"
+}
+
 fmt_tokens() {
   python3 -c "
 n = $1
@@ -121,12 +134,14 @@ S_PCT_N=$(fmt_pct "$S_PCT")
 W_PCT_N=$(fmt_pct "$W_PCT")
 S_RST_F=$(fmt_reset "$S_RST")
 W_RST_F=$(fmt_reset "$W_RST")
+S_RST_KST=$(fmt_reset_kst "$S_RST")
+W_RST_KST=$(fmt_reset_kst "$W_RST")
 
 # ─── SwiftBar 출력 ───────────────────────────────────
 echo "${S_PCT_N}%(${S_RST_F})·${W_PCT_N}%(${W_RST_F})"
 echo "---"
-echo "⏱ 세션 (5h)  ${S_PCT_N}%   리셋 ${S_RST_F}"
-echo "📅 주간 (7d)  ${W_PCT_N}%   리셋 ${W_RST_F}"
+echo "세션 (5h)  ${S_PCT_N}%   리셋 ${S_RST_KST}"
+echo "주간 (7d)  ${W_PCT_N}%   리셋 ${W_RST_KST}"
 echo "---"
 echo "오늘 토큰   $(fmt_tokens ${TODAY_TOK:-0})"
 echo "이번 주 토큰  $(fmt_tokens ${WEEK_TOK:-0})"
