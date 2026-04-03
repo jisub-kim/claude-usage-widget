@@ -140,8 +140,8 @@ W_RST_KST=$(fmt_reset_kst "$W_RST")
 # ─── SwiftBar 출력 ───────────────────────────────────
 echo "${S_PCT_N}%(${S_RST_F})·${W_PCT_N}%(${W_RST_F})"
 echo "---"
-echo "세션 (5h)  ${S_PCT_N}%   리셋 ${S_RST_KST}"
-echo "주간 (7d)  ${W_PCT_N}%   리셋 ${W_RST_KST}"
+echo "⏱세션(5h)  ${S_PCT_N}%   리셋 ${S_RST_KST}"
+echo "📅주간(7d)  ${W_PCT_N}%   리셋 ${W_RST_KST}"
 echo "---"
 echo "오늘 토큰   $(fmt_tokens ${TODAY_TOK:-0})"
 echo "이번 주 토큰  $(fmt_tokens ${WEEK_TOK:-0})"
