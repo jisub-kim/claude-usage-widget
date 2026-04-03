@@ -8,11 +8,19 @@ Claude Code 사용량을 macOS 메뉴바에서 바로 확인할 수 있는 Swift
 
 ## Preview
 
+![Menu bar preview](assets/menubar-preview.png)
+
+메뉴바에 세션 한도와 주간 한도가 실시간으로 표시됩니다.
+
+Displays session and weekly usage limits in real time directly in your menu bar.
+
+클릭하면 상세 정보를 확인할 수 있습니다 / Click to see details:
+
 ```
-12%(3h10m)·71%(2d13h)
+12%(2h59m)·71%(2d12h)
 ─────────────────────────
-⏱ 세션 (5h)  12%   리셋 3h10m
-📅 주간 (7d)  71%   리셋 2d13h
+⏱ 세션 (5h)  12%   리셋 2h59m
+📅 주간 (7d)  71%   리셋 2d12h
 ─────────────────────────
 오늘 토큰   278K
 이번 주 토큰  3.7M
@@ -22,8 +30,8 @@ Claude Code 사용량을 macOS 메뉴바에서 바로 확인할 수 있는 Swift
 
 | Menu bar | Detail |
 |----------|--------|
-| `12%(3h10m)` | 5-hour session usage · reset in 3h 10m |
-| `71%(2d13h)` | 7-day weekly usage · reset in 2d 13h |
+| `12%(2h59m)` | 5-hour session usage · reset in 2h 59m |
+| `71%(2d12h)` | 7-day weekly usage · reset in 2d 12h |
 
 ---
 
