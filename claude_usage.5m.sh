@@ -101,7 +101,7 @@ if e <= 0:
 else:
     kst = zoneinfo.ZoneInfo('Asia/Seoul')
     dt = datetime.datetime.fromtimestamp(e, tz=kst)
-    print(dt.strftime('%m/%d %H:%M KST'))
+    print(dt.strftime('%m/%d(%a) %H:%M KST'))
 " 2>/dev/null || echo "?"
 }
 
