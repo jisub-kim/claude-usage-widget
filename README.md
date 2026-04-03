@@ -8,7 +8,7 @@ Claude Code 사용량을 macOS 메뉴바에서 바로 확인할 수 있는 Swift
 
 ## Preview
 
-![Menu bar preview](assets/menubar-preview.png)
+![Menu bar preview](assets/menubar-preview.gif)
 
 메뉴바에 세션 한도와 주간 한도가 실시간으로 표시됩니다.
 
