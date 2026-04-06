@@ -71,7 +71,11 @@ brew install --cask swiftbar
 mkdir -p ~/.swiftbar
 ```
 
-### 3. Download the plugin / 플러그인 다운로드
+### 3. Install the plugin / 플러그인 설치
+
+두 가지 방법 중 선택하세요. / Choose one of two methods:
+
+#### Option A: Download (단순 설치)
 
 ```bash
 curl -o ~/.swiftbar/claude_usage.5m.sh \
@@ -79,6 +83,21 @@ curl -o ~/.swiftbar/claude_usage.5m.sh \
 
 chmod +x ~/.swiftbar/claude_usage.5m.sh
 ```
+
+#### Option B: Clone + Symlink (자동 업데이트)
+
+repo를 클론한 뒤 심링크를 걸면, `git pull`만으로 스크립트가 자동 업데이트됩니다.
+
+Clone the repo and create a symlink — updates are applied automatically with `git pull`.
+
+```bash
+git clone https://github.com/jisub-kim/claude-usage-widget.git ~/Developer/claude-usage-widget
+
+ln -s ~/Developer/claude-usage-widget/claude_usage.5m.sh ~/.swiftbar/claude_usage.5m.sh
+```
+
+> 클론 경로는 원하는 곳으로 변경 가능합니다.
+> You can clone to any directory you prefer.
 
 ### 4. Launch SwiftBar / SwiftBar 실행
 
@@ -106,8 +125,14 @@ The number in the filename controls the refresh interval.
 | `claude_usage.10m.sh` | 10분마다 / Every 10 min |
 
 ```bash
-# 예시: 5분으로 변경 / Change to 5 min
-mv ~/.swiftbar/claude_usage.1m.sh ~/.swiftbar/claude_usage.5m.sh
+# 예시: 10분으로 변경 / Change to 10 min
+
+# Option A (다운로드 방식)
+mv ~/.swiftbar/claude_usage.5m.sh ~/.swiftbar/claude_usage.10m.sh
+
+# Option B (심링크 방식) — 기존 심링크를 새 이름으로 재생성
+rm ~/.swiftbar/claude_usage.5m.sh
+ln -s /path/to/claude-usage-widget/claude_usage.5m.sh ~/.swiftbar/claude_usage.10m.sh
 ```
 
 ---
