@@ -138,7 +138,7 @@ S_RST_KST=$(fmt_reset_kst "$S_RST")
 W_RST_KST=$(fmt_reset_kst "$W_RST")
 
 # ─── SwiftBar 출력 ───────────────────────────────────
-echo "${S_PCT_N}%(${S_RST_F})·${W_PCT_N}%(${W_RST_F})"
+echo "🤖 ${S_PCT_N}%(${S_RST_F})"
 echo "---"
 echo "🕓 세션(5h)  ${S_PCT_N}%   리셋 ${S_RST_KST}"
 echo "📅 주간(7d)  ${W_PCT_N}%   리셋 ${W_RST_KST}"
